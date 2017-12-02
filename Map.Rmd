@@ -1,0 +1,25 @@
+---
+title: "Developing Data Products-Week 2-Assignment"
+author: "Mohamed Farrag"
+date: "December 2, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Creating a map using Leaflet
+this is my first map using Leaflet package.
+```{r}
+library(leaflet)
+my_map <- leaflet() %>%
+            addTiles()
+
+```
+
+Create a link to my office site at Cairo, Egypt
+```{r}
+leaflet() %>%
+    addTiles() %>%
+    addMarkers(lat=30.026137,  lng=31.415294, popup = "My office")
+```
